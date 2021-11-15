@@ -1,2 +1,2 @@
-# FM-DSA-course
+# algorithms-exercises
 Created with CodeSandbox

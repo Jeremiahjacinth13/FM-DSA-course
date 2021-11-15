@@ -14,24 +14,30 @@ function bubbleSort(nums) {
   // code goes here
 
   // keeps track of swap
-  // let hasSwapped = false;
+  let needsSwap = true;
 
-  // for (let i = 0; i < nums.lenght; i++) {
-  //   // the elements are not in order
-  //   if (nums[i] > nums[i + 1]) {
-  //     // swap the elements
-  //     let temp = nums[i];
-  //     nums[i] = nums[i + 1];
-  //     nums[i + 1] = temp;
+  while (needsSwap) {
 
-  //     hasSwapped = true;
-  //   }
-  // }
+    let hasSwapped = false;
 
-  console.log(nums);
+    for (let i = 0; i < nums.length; i++) {
 
-  return nums;
+      if (nums[i] > nums[i + 1]) {
+        let temp = nums[i];
+        nums[i] = nums[i + 1];
+        nums[i + 1] = temp;
+
+        hasSwapped = true;
+      }
+    }
+
+    needsSwap = hasSwapped;
+  }
+
+  console.log(nums)
 }
+
+bubbleSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]);
 
 // unit tests
 // do not modify the below code
